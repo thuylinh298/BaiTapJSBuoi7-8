@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Queen Đặng Thuỳ Linh</title>
+
+    <!-- Required meta tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="./img/icon.png" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Tabs CSS-->
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/normalize/2.0.1/normalize.css"
+    />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=PT+Sans"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+
+  <body>
+      <body>
+        <div class="tabbed">
+          <input type="radio" name="tabs" id="tab-nav-1" checked />
+          <label for="tab-nav-1">Đáp Án 1</label>
+          <input type="radio" name="tabs" id="tab-nav-2" />
+          <label for="tab-nav-2">Đáp Án 2</label>
+          <input type="radio" name="tabs" id="tab-nav-3" />
+          <label for="tab-nav-3">Đáp Án 3</label>
+          <div class="tabs">
+            <div>
+              <h2>Cho người dùng nhập vào số nguyên và lưu trữ vào mảng</h2>
+              <div class="mb-3">
+                  <label for="so" class="form-label">Nhập vào số:</label>
+                  <input type="text" class="form-control" id="so">
+              </div>
+              <div class="mb-3">
+                  <button type="button" onclick="themSo()">Thêm số</button>
+                  <button type="button" onclick="demSoDuong()">Đếm số dương</button>
+                  <button type="button" onclick="tongSoDuong()">Tính tổng số dương</button>
+                  <button type="button" onclick="soNhoNhat()">Tìm số nhỏ nhất</button>
+                  <button type="button" onclick="soDuongNhoNhat()">Tìm số dương nhỏ nhất</button>
+                  <button type="button" onclick="soChanCuoiCung()">Tìm số chẵn cuối cùng</button>
+                  <button type="button" onclick="sntDauTien()">Tìm số nguyên tố đầu tiên</button>
+                  <button type="button" onclick="xoaSo()">Xóa số</button>
+              </div>
+              <div class="alert alert-info" id="mangNguoiDungNhap"></div>
+              <div class="alert alert-danger" id="demSoDuong"></div>
+              <div class="alert alert-info" id="tongSoDuong"></div>
+              <div class="alert alert-danger" id="soNhoNhat"></div>
+              <div class="alert alert-info" id="soDuongNhoNhat"></div>
+              <div class="alert alert-danger" id="soChanCuoiCung"></div>
+              <div class="alert alert-danger" id="sntDauTien"></div>
+            </div>
+
+            <div>
+            <h2>Đổi vị trí của 2 giá trị trong mảng trên</h2>
+            <div class="row mt-3 mb-3">
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Nhập vị trí 1" id="index1">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Nhập vị trí 2" id="index2">
+                </div>
+            </div>
+            <div class="mb-3">
+                <button type="button" onclick="doiCho()">Đổi chỗ</button>
+                <button type="button" onclick="sapXepTangDan()">Sắp xếp tăng dần</button>
+            </div>
+            <div class="alert alert-info" id="doiCho"></div>
+            <div class="alert alert-info" id="sapXepTangDan"></div>
+            </div>
+
+            <div>
+              <h2>Nhập vào một mảng số thực và đếm số nguyên trong mảng đó</h2>
+              <div class="mb-3">
+                  <label for="soA" class="form-label">Nhập vào số:</label>
+                  <input type="text" class="form-control" id="soA">
+              </div>
+              <div class="mb-3">
+                  <button type="button" onclick="themSoA()">Thêm số</button>
+                  <button type="button" onclick="demSoNguyen()">Đếm số nguyên</button>
+                  <button type="button" onclick="soSanhAmDuong()">So Sánh</button>
+                  <button type="button" onclick="xoaSoA()">Xóa số</button>
+              </div>
+              <div class="alert alert-info" id="mangSoThuc"></div>
+              <div class="alert alert-danger" id="demSoNguyen"></div>
+              <div class="alert alert-info" id="soSanh"></div>
+            </div>
+          </div>
+        </div>
+  </body>
+
+  <!-- Bootstrap Javascript -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.6/prefixfree.min.js"></script>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+  ></script>
+
+  <script src="./js/main.js"></script>
+</html>

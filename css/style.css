@@ -1,0 +1,178 @@
+@import "compass/css3";
+
+/* General CSS */
+
+* {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  font-size: 62, 5%;
+}
+
+body {
+  background: url(../img/background.jpeg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #3f3f3f;
+  font: 1em "PT Sans", sans-serif;
+}
+
+/* Tabs CSS */
+
+::selection {
+  background-color: #4ec6de;
+}
+
+.tabbed {
+  width: 700px;
+  margin: 50px auto;
+}
+
+.tabbed > input {
+  display: none;
+}
+
+.tabbed > label {
+  display: block;
+  float: left;
+  padding: 12px 20px;
+  margin-right: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.tabbed > label:hover,
+.tabbed > input:checked + label {
+  background: #4ec6de;
+}
+
+.tabs {
+  clear: both;
+  perspective: 600px;
+}
+
+.tabs > div {
+  width: 700px;
+  position: absolute;
+  border: 2px solid #4ec6de;
+  padding: 10px 30px 40px;
+  line-height: 1.4em;
+  opacity: 0;
+  transform: rotateX(-20deg);
+  transform-origin: top center;
+  transition: opacity 0.3s, transform 1s;
+  z-index: 0;
+}
+
+#tab-nav-1:checked ~ .tabs > div:nth-of-type(1),
+#tab-nav-2:checked ~ .tabs > div:nth-of-type(2),
+#tab-nav-3:checked ~ .tabs > div:nth-of-type(3),
+#tab-nav-4:checked ~ .tabs > div:nth-of-type(4),
+#tab-nav-5:checked ~ .tabs > div:nth-of-type(5) {
+  transform: rotateX(0);
+  opacity: 1;
+  z-index: 1;
+}
+
+@media screen and (max-width: 700px) {
+  .tabbed {
+    width: 400px;
+  }
+  .tabbed > label {
+    display: none;
+  }
+  .tabs > div {
+    width: 400px;
+    border: none;
+    padding: 0;
+    opacity: 1;
+    position: relative;
+    transform: none;
+    margin-bottom: 60px;
+  }
+  .tabs > div h2 {
+    border-bottom: 2px solid #4ec6de;
+    padding-bottom: 0.5em;
+  }
+}
+
+/* Button CSS */
+
+button {
+  padding: 25px 30px;
+  background-color: #4ec6de;
+  color: #ffdb6f;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  letter-spacing: 4px;
+  overflow: hidden;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #4ec6de;
+  color: #ffdb6f;
+  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+    0 0 200px #03e9f4;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+/* Input CSS */
+
+.form__label {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  margin-left: 2rem;
+  margin-top: 0.7rem;
+  display: block;
+  transition: all 0.3s;
+  transform: translateY(0rem);
+}
+
+.form__input {
+  font-family: "Roboto", sans-serif;
+  color: #333;
+  font-size: 1.2rem;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  border-radius: 0.2rem;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  width: 50%;
+  display: inline-block;
+  border-bottom: 0.3rem solid transparent;
+  transition: all 0.3s;
+}
+
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(-4rem);
+  transform: translateY(-4rem);
+}
+
+/* Hide */
+
+#mangNguoiDungNhap,
+#demSoDuong,
+#tongSoDuong,
+#soNhoNhat,
+#soDuongNhoNhat,
+#soChanCuoiCung,
+#sntDauTien,
+#doiCho,
+#sapXepTangDan,
+#mangSoThuc,
+#demSoNguyen,
+#soSanh {
+  display: none;
+}
